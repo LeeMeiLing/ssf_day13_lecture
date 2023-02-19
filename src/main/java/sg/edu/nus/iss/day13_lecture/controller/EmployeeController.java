@@ -73,8 +73,9 @@ public class EmployeeController {
         return "employeeupdate";
     }
 
+
     @PostMapping("/update")
-    public String updateEmployeeProcess(@ModelAttribute("employee") Employee emp, 
+    public String updateEmployeeProcess(@Valid @ModelAttribute("employee") Employee emp, 
     BindingResult bindingresult, Model model){
 
         if(bindingresult.hasErrors()){

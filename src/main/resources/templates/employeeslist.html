@@ -41,22 +41,15 @@
                     <td data-th-text="${emp.email}"></td>
                     <td data-th-text="${emp.phoneNo}"></td>
                     <td data-th-text="${emp.salary}"></td>
-                    <td data-th-text="${emp.birthDay}"></td>
+                    <!-- <td data-th-text="${emp.birthDay}"></td> -->
+                    <td data-th-text="${#dates.format(emp.birthDay,'dd-MMM-yyyy')}"></td>
                     <td data-th-text="${emp.address}"></td>
                     <td data-th-text="${emp.postalCode}"></td>
                     <td>
                         <a class="btn btn-primary" th:href="@{/employees/updateEmployee/{email}(email = ${emp.email})}">Update</a>
+                        <!-- <a class="btn btn-primary" th:href="@{/employees/updateEmployee/{emp}(emp = ${emp})}">Update</a> -->
                         <a class="btn btn-primary" th:href="@{/employees/deleteEmployee/{email}(email = ${emp.email})}">Delete</a>
                     </td>
-    
-                    <!-- <td data-th-text = "*{firstName}"></td>
-                    <td data-th-text = "*{lastName}"></td>
-                    <td data-th-text = "*{email}"></td>
-                    <td data-th-text = "*{phoneNo}"></td>
-                    <td data-th-text = "*{salary}"></td>
-                    <td data-th-text = "*{birthDay}"></td>
-                    <td data-th-text = "*{address}"></td>
-                    <td data-th-text = "*{postalCode}"></td> -->
     
                 </tr>
             </tbody>

@@ -28,12 +28,19 @@ public class EmployeeRepo {
 
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         Date date = df.parse("1980-10-15");
+        // DateFormat df2 = new SimpleDateFormat("dd-MM-yyyy");
+        // System.out.println(df2.format(date));
         Employee emp = new Employee("Derrick", "Tan", "derrick@gmail.com", "91234567", 7500, date, "10 Ghim Moh", 272210);
         employees.add(emp);
+
+        DateFormat df2 = new SimpleDateFormat("dd-MM-yyyy");
+        date = new Date();
+        System.out.println(df2.format(date));
 
         // Employee emp = new Employee("Derrick", "Tan", "derrick@gmail.com", "91234567", 7500, new Date(1980-10-15), "10 Ghim Moh", 272210);
 
         date = df.parse("1979-02-18");
+        System.out.println(date);
         emp = new Employee("Dennis", "Chew", "dennis@gmail.com", "81234567", 8500, date, "28 Ghim Moh", 272228);
         employees.add(emp);
 
